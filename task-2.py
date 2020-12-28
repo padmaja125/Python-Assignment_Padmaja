@@ -97,7 +97,7 @@ else :
 
 print ("You entered the loop")
 x = 1
-while x > 1 :
+while x:
     x = int (input("Enter the number : "))
     if x > 0:
         print (" Good going")
@@ -105,3 +105,55 @@ while x > 1 :
     else :
         print ("It's over")
         break
+
+# Write a program in Python which will find all such numbers which are divisible by 7 but are not a
+# multiple of 5, between 2000 and 3200.
+
+for x in range (2000,3201) :
+    if x % 7 == 0 and x % 5 != 0:
+        print (x) 
+
+# What is the output of the following code examples
+"""
+x=123
+for i in x:
+    print(i)
+
+print ("TypeError: 'int' object is not iterable")
+"""
+i = 0
+for i in x:
+    print(i)
+    while i < 5:
+        print(i)
+        i += 1
+        if i == 3:
+            break
+        else:
+            print("error")
+
+print("NameError: name 'x' is not defined")
+
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        Break
+print("NameError: name 'Break' is not defined")
+
+# Write a program that prints all the numbers from 0 to 6 except 3 and 6.
+# Expected output: 0 1 2 4 5
+for x in range (0,7):
+    if x == 3 or x == 6:
+        continue
+    print(x)
+
+# Write a program that accepts a string as an input from the user and calculate the number of digits
+# and letters.
+
+x = input("Enter the message : ")
+numbers = sum(c.isdigit() for c in x)
+letters = sum(c.isalpha() for c in x)
+print ("Numbers = ",numbers, ", letters = ", letters)
+
