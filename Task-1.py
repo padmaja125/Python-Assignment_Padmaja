@@ -31,12 +31,13 @@ x, y = 21, 12
 x = x + y
 y = x - y
 x = x - y
+#x,y = y,x
 print('x = {0} , y = {1}'.format(x, y))
 
 # Write a program that takes input from the user and prints it using both Python 2.x and Python 3.x
 # Version.
-x = input(' Enter the value : ')
-y = input ('Enter the values ')
+x = raw_input(' Enter the value : ')
+y = raw_input ('Enter the values ')
 print (y)
 # in version 2.x ==> print x
 
@@ -56,8 +57,8 @@ x = 10
 y = 2.6
 z = 'string'
 a = 2 + 3j
-print ('type for 10 :',type(x))
-print ('type for 2.6 :',type(y))
+print ('type for 10 :',eval(x))
+print ('type for 2.6 :',eval(y))
 print ('type for string :',type(z))
 print ('type for 2 + 3j :',type(a))
 

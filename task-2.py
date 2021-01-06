@@ -4,13 +4,12 @@
 # If a number is divisible by both 3 and 5 it should print “Consultadd - Python Training” as a
 # string.
 x = int(input("Enter the number : "))
-if x != 0 :
-    if x % 3 == 0 and x % 5 == 0:
-        print ("Consultadd - Python Training")
-    elif x % 3 == 0:
-        print ("Consultadd")
-    else :
-        print("Python Training")
+if x % 3 == 0 and x % 5 == 0:
+    print ("Consultadd - Python Training")
+elif x % 3 == 0:
+    print ("Consultadd")
+elif x %5 ==0 :
+    print("Python Training")
 else:
     print ("enter the proper number")
 
@@ -22,54 +21,31 @@ else:
 # If User Enter 4 - Multiplication
 # If User Enter 5 - Average
 
+x = int(input(" Enter the 1st value : "))
+y = int(input("Enter the 2nd value : "))
 select = int(input("Enter the number from (1-5): "))
 if select <=5 and select >= 0:
     if select == 1:
         print("Addition")
-        x = int(input(" Enter the 1st value : "))
-        y = int(input("Enter the 2nd value : "))
         z = x + y
-        if z > 0 :
-            print(x, "+", y ,"gives", z)
-        else :
-            print("Negative")
+        print(x, "+", y ,"gives", z)
         
     elif select == 2:
         print("Subtraction")
-        x = int(input(" Enter the 1st value : "))
-        y = int(input("Enter the 2nd value : "))
         z = x - y
-        if z > 0:
-            print(x, "-", y ,"gives", z)
-        else :
-            print("Negative")
+        print(x, "-", y ,"gives", z)
     elif select == 3:
         print("Division")
-        x = int(input(" Enter the 1st value : "))
-        y = int(input("Enter the 2nd value : "))
         z = x / y
-        if z > 0:
-            print(x, "/", y ,"gives", z)
-        else :
-            print("Negative")    
+        print(x, "/", y ,"gives", z)    
     elif select == 4:
         print("Multiplication")
-        x = int(input(" Enter the 1st value  : "))
-        y = int(input("Enter the 2nd value : "))
         z = x * y
-        if z > 0:
-            print(x, "*", y ,"gives", z)
-        else :
-            print("Negative")
+        print(x, "*", y ,"gives", z)
     else :
         print("Average")
-        x = int(input(" Enter the 1st value  : "))
-        y = int(input("Enter the 2nd value : "))
         z = (x + y)/ 2
-        if z > 0:
-            print(x, y ,"makes a average of ", z)
-        else :
-            print("Negative")
+        print(x, y ,"makes a average of ", z)
 else:
     print("you entered wrong option")
     
@@ -96,8 +72,7 @@ else :
 # If user enters a positive number just continue in the loop and print “Good Going”
 
 print ("You entered the loop")
-x = 1
-while x:
+while True:
     x = int (input("Enter the number : "))
     if x > 0:
         print (" Good going")
@@ -122,17 +97,19 @@ for i in x:
 print ("TypeError: 'int' object is not iterable")
 """
 i = 0
-for i in x:
+while i < 5:
     print(i)
-    while i < 5:
-        print(i)
-        i += 1
-        if i == 3:
-            break
-        else:
-            print("error")
+    i += 1
+    if i == 3:
+        break
+    else:
+        print("error")
 
-print("NameError: name 'x' is not defined")
+# output: 0
+#error
+#1
+#error
+#2
 
 count = 0
 while True:
